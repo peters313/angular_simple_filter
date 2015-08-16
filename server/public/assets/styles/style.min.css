@@ -1,1 +1,11 @@
-/*! angular_lecture_build 2015-08-13 */
+li {
+    opacity: 1;
+}
+li.ng-enter {
+    -webkit-transition: 1s;
+    transition: 2s;
+    opacity: 0;
+}
+li.ng-enter-active {
+    opacity: 1;
+}

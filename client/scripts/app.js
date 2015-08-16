@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngAnimate']);
 
 myApp.controller("WelcomeController", ['$scope', '$http', function($scope, $http){
     $scope.note = {};
@@ -13,7 +13,10 @@ myApp.controller("WelcomeController", ['$scope', '$http', function($scope, $http
             console.log(data);
         });
     };
-
+    $scope.customFilter = function(name) {
+        name.message = name.message.replace(/[0-9!@#$^&'%*()+-\/{}:<>?,.]/g, '');
+        return name
+    };
     $scope.updateMessage = function(note){
         //POST
         console.log(note);

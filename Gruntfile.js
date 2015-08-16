@@ -8,12 +8,6 @@ module.exports = function(grunt){
             build: {
                 src: 'client/scripts/app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
-            },
-            style: {
-                src: [
-                    "client/styles/style.css"
-                ],
-                "dest": "server/public/assets/styles/style.min.css"
             }
         },
         copy: {
@@ -30,7 +24,9 @@ module.exports = function(grunt){
                 cwd: 'node_modules',
                 src: [
                     "angular/angular.min.js",
-                    "angular/angular.min.js.map"
+                    "angular/angular.min.js.map",
+                    "angular-animate/angular-animate.min.js",
+                    "angular-animate/angular-animate.min.js.map"
                 ],
                 "dest": "server/public/vendors/"
             },
@@ -42,6 +38,12 @@ module.exports = function(grunt){
                     "welcome.html"
                 ],
                 "dest": "server/public/assets/views/"
+            },
+            style: {
+                src: [
+                    "client/styles/style.css"
+                ],
+                "dest": "server/public/assets/styles/style.min.css"
             }
         }
     });

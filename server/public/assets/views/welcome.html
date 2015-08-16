@@ -4,9 +4,16 @@
         <input ng-model="note.message" type="text" placeholder="Enter your name">
     </div>
     <button ng-click="updateMessage(note)">Update</button>
-    <div ng-repeat="name in names | filter:note">
-        <div class = "col-sm-12 col-md-3">{{name.message}}</div>
-    <!--<input ng-model="name" placeholder="Enter your name">-->
-    <!--<h2>What's up {{name}}</h2>-->
-    </div>
+    <ul>
+        <li class ="col-sm-12 col-md-3" ng-repeat="name in names | filter:customFilter">
+            {{name.message}}
+        </li>
+    </ul>
+
+    <!--<div ng-repeat="name in names | filter:note">-->
+        <!--&lt;!&ndash;| filter:note&ndash;&gt;-->
+        <!--<div class= "col-sm-12 col-md-3">{{name.message}}</div>-->
+    <!--&lt;!&ndash;<input ng-model="name" placeholder="Enter your name">&ndash;&gt;-->
+    <!--&lt;!&ndash;<h2>What's up {{name}}</h2>&ndash;&gt;-->
+    <!--</div>-->
 </div>

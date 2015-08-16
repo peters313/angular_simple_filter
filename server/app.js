@@ -3,6 +3,7 @@ var index = require('./routes/index');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+//var angular = require('angular-animate');
 //mvc = model view controller
 
 var mongoose = require('mongoose');
